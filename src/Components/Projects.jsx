@@ -26,22 +26,28 @@ const Projects = () => {
             description="React, Tailwind CSS"
           />
           <Project
+            title="Freelance Portfolio"
+            src={assets.chakraPortfolio}
+            href="https://crypto-dashboard-gilt-one.vercel.app/"
+            description="React, Chakra-ui, Tailwind CSS"
+          />
+          <Project
             title="Crypto Dashboard App"
             src={assets.dashBoard}
             href="https://crypto-dashboard-gilt-one.vercel.app/"
-            description="React, Node.js, MongoDB"
+            description="React, API, Tailwind CSS, Chart.js"
           />
           <Project
             title="Todo App with Firebase Database"
             src={assets.firebase}
             href="https://tofunmitranspose.github.io/firebase-todo/"
-            description="React, Node.js, MongoDB"
+            description="React, Firebase"
           />
           <Project
             title="Landing Page for Branding"
             src={assets.brand}
             href="https://tofunmitranspose.github.io/brand/"
-            description="React, Node.js, MongoDB"
+            description="HTML-5, Tailwind CSS"
           />
         </div>
       </div>
