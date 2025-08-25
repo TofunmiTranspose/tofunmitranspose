@@ -37,7 +37,7 @@ const Contact = () => {
           <FaLinkedin className="text-[#235dfc]" />
         </a>
         <a href="tel:+2349134744279">
-          <FaPhoneSquareAlt className="text-[#3bff3b]" />
+          <FaPhoneSquareAlt className="text-[#3bff3c]" />
         </a>
         <a href="https://github.com/TofunmiTranspose">
           <FaGitAlt className="text-[#fff]" />
