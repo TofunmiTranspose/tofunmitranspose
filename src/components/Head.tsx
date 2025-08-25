@@ -14,11 +14,11 @@ const Head = () => {
       <div className="ml-3">
         <h2 className={`sm:text-sm text-xl font-bold ${themeCol.b}`}>
           <span className="sm:hidden">TRANSPOSE</span>{" "}
-          <span className="hidden sm:inline">Tofunmi</span>{" "}
-          <span className="hidden sm:inline">Okeowo</span>
+          <span className="hidden sm:inline md:text-lg">Tofunmi</span>{" "}
+          <span className="hidden sm:inline md:text-lg">Okeowo</span>
         </h2>
       </div>
-      <div className=" min-w-50 hidden w-5/10 text-gray-300 text-[10px] sm:flex justify-between">
+      <div className=" min-w-50 hidden w-5/10 text-gray-300 text-[10.5px] md:text-[12px] lg:text-[14px] sm:flex justify-between">
         <a href="#">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#">Experience</a>
