@@ -8,7 +8,7 @@ const Navbar = ({ toggleOpen }: { toggleOpen: () => void }) => {
   const theme = useContext(ThemeContext);
   document
     .getElementById("theme-color")
-    ?.setAttribute("content", theme?.theme ? "#ffffee" : "#0f0f0f");
+    ?.setAttribute("content", theme?.theme ? "#0f0f0f" : "#ffffee");
 
   return (
     <div className="flex items-center justify-between gap-2 px-4 pb-2">
@@ -17,7 +17,6 @@ const Navbar = ({ toggleOpen }: { toggleOpen: () => void }) => {
         <FaSun
           onClick={() => {
             theme?.toggleTheme(theme);
-            
           }}
           className={`${theme?.theme ? "text-white" : "text-[#1b1b1b]"} size-5`}
         />

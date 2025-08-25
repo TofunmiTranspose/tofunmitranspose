@@ -1,6 +1,6 @@
 const Attributes = () => {
   return (
-    <div className='mt-10 w-full h-8 bg-[#322828] flex items-center justify-center text-white text-[8px] sm:text-[12px] font-semibold z-1'
+    <div className='mt-10 w-full h-8 bg-[#322828] flex items-center justify-center text-white text-[10px] sm:text-[12px] font-semibold z-1'
     >
       <ul className='w-full flex justify-around overflow-hidden'>
         <li className='ani mr-1'>FAST-LEARNER</li>

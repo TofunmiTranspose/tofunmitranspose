@@ -14,19 +14,19 @@ const Contact = () => {
       className="w-full py-2 px-4 bg-[#1d1d1d] mt-15 flex flex-col gap-2"
     >
       <div>
-        <h1 className="text-white font-semibold text-lg">Contact</h1>
+        <h1 className="text-white font-semibold text-xl">Contact</h1>
       </div>
-      <div className="text-gray-400 text-[10px]  pb-2">
+      <div className="text-gray-400 text-[12px]  pb-2">
         Seasoned Front-end Developer with hands-on experience in designing,
         bringing Figma to life, and building web solutions. <br />
         <div className="font-semibold mt-1 text-gray-300">
-          <MdMailOutline className="text-gray-300 inline text-[14px]" />{" "}
+          <MdMailOutline className="text-gray-300 inline text-[16px]" />{" "}
           <a target="_blank" href="mailto:tofexzyno@gmail.com">
             tofexzyno@gmail.com
           </a>
         </div>
       </div>
-      <div className="flex text-white gap-5 text-lg">
+      <div className="flex text-white gap-5 text-xl">
         <a target="_blank" href="https://wa.link/yjileb">
           <FaWhatsapp className="text-green-400" />
         </a>
@@ -39,7 +39,7 @@ const Contact = () => {
         <a href="tel:+2349134744279">
           <FaPhoneSquareAlt className="text-[#3bff3c]" />
         </a>
-        <a href="https://github.com/TofunmiTranspose">
+        <a target="_blank" href="https://github.com/TofunmiTranspose">
           <FaGitAlt className="text-[#fff]" />
         </a>
       </div>
