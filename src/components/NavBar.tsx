@@ -12,7 +12,8 @@ const Navbar = ({ toggleOpen }: { toggleOpen: () => void }) => {
       <Head />
       <div className="flex items-center gap-2">
         <FaSun
-          onClick={() => theme?.toggleTheme(theme)}
+          onClick={() => {theme?.toggleTheme(theme); document.getElementById("theme-color")?.setAttribute("content", theme?.theme ? "#ffffee" : "#0f0f0f"); console.log(document.getElementById("theme-color"));
+          }}
           className={`${theme?.theme ? "text-white" : "text-[#1b1b1b]"} size-5`}
         />
         {theme && <MenuBar theme={theme} toggleOpen={toggleOpen} />}
