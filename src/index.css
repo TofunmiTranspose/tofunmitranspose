@@ -1,0 +1,22 @@
+@import "tailwindcss";
+.ani {
+  animation: move 20s infinite linear;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(100vw);
+  }
+  20% {
+    transform: translateX(50vw);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  80% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}

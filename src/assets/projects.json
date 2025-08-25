@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "title": "Crypto Dashboard",
+  "description": "A CryptoCurrency Dashboard that fetches real-time data of crypto prices and more...",
+  "liveUrl": "https://crypto-dashboard-gilt-one.vercel.app/",
+  "githubUrl": "https://github.com/TofunmiTranspose/cryptoDashboard",
+  "previewImage": "dashBoard.png",
+  "technologies": ["React", "Tailwind-CSS", "API"]
+}
