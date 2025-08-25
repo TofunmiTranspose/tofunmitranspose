@@ -6,7 +6,6 @@ import {
   FaPhoneSquareAlt,
   FaGitAlt,
 } from "react-icons/fa";
-import { FaSquareGit } from "react-icons/fa6";
 
 const Contact = () => {
   return (
