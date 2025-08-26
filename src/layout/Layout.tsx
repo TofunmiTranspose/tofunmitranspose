@@ -7,9 +7,13 @@ import { ThemeContext } from "../context/ThemeContext";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const toggleOpen = () => setOpen(!isOpen);
-  const theme = useContext(ThemeContext);  
+  const theme = useContext(ThemeContext);
   return (
-    <div className={`${theme?.theme ? "bg-[#0f0f0f]" : "bg-[#ffffee]"}  h-screen pt-2 flex flex-col justify-between`}>
+    <div
+      className={`${
+        theme?.theme ? "bg-[#0f0f0f]" : "bg-[#ffffee]"
+      }  h-full pt-2 flex flex-col justify-between`}
+    >
       <DropDown isOpen={isOpen} toggleOpen={toggleOpen} />
       <NavBar toggleOpen={toggleOpen} />
       <div className="h-full">
