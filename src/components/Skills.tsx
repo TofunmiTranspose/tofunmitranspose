@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="pt-4 bg-[#111111] h-35 flex flex-col items-center gap-5"
+      className="pt-4 bg-black backdrop-filter backdrop-blur h-35 flex flex-col items-center gap-5"
     >
       <h2 className="text-3xl text-white font-bold">Skills</h2>
       <div className="flex justify-around w-9/10">

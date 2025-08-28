@@ -9,6 +9,7 @@ import dashBoard from "../assets/dashBoard.jpg";
 import firebase from "../assets/firbase.jpg";
 import brand from "../assets/brand.jpg";
 import { ThemeContext } from "../context/ThemeContext";
+import { motion } from "framer-motion";
 
 interface Project {
   title: string;
@@ -125,9 +126,18 @@ const Project = ({
   description: string;
   techStack: string[];
 }) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
   const theme = useContext(ThemeContext);
   return (
-    <div
+    
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.20 }}
       className="
        font-sans max-w-sm mx-auto
       bg-transparent rounded-xl shadow-lg overflow-hidden
@@ -201,6 +211,6 @@ const Project = ({
           <span className="ml-2">&#8594;</span>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
