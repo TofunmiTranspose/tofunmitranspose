@@ -7,8 +7,10 @@ import firebase from "./firbase.jpg";
 import brand from "./brand.jpg";
 import storelink from "./storelink.png";
 import ecommerce from "./ecommerce.png";
+import apply from './application.pdf'
+import admission from './admission.pdf'
 
-export const assets = {
+export const {assets} = {
   school,
   sail,
   dashBoard,
@@ -18,4 +20,6 @@ export const assets = {
   storelink,
   ecommerce,
   agricon,
+  apply,
+  admission
 };

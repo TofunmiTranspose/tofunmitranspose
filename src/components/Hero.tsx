@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext.js";
 import profilePic from "../assets/ProfilePic.png";
-
+import apply from "../assets/application.pdf";
+import admission from "../assets/admission.pdf";
 const Hero = () => {
   const theme = useContext(ThemeContext);
   const headCol = theme?.theme ? "text-gray-200" : "text-[#000000]";
@@ -19,7 +20,9 @@ const Hero = () => {
         >
           FRONT-END WEB DEVELOPER
         </h2>
-        <h1 className={`text-2xl sm:text-4xl xl:text-5xl 2xl:text-6xl ${nameCol} font-semibold my-2`}>
+        <h1
+          className={`text-2xl sm:text-4xl xl:text-5xl 2xl:text-6xl ${nameCol} font-semibold my-2`}
+        >
           TOFUNMI PAUL OKEOWO
         </h1>
         <p
@@ -34,6 +37,16 @@ const Hero = () => {
              transition-all duration-300 ease-in-out cursor-pointer"
           >
             Download My Resume
+          </button>
+          <button className="block text-white text-xs mb-2">
+            <a href={apply} download={apply}>
+              Apply
+            </a>
+          </button>
+          <button className="block text-white text-xs mb-2">
+            <a href={admission} download={admission}>
+              Admission
+            </a>
           </button>
         </a>
       </div>
