@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { use } from "react";
 import agricon from "../assets/agricon.png";
 import storelink from "../assets/storelink.png";
 import ecommerce from "../assets/ecommerce.png";
@@ -19,7 +19,7 @@ interface Project {
   techStack: string[];
 }
 const Projects = () => {
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   const projects: Project[] = [
     {
       title: "Agricon",
@@ -131,7 +131,7 @@ const Project = ({
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   return (
     <motion.div
       variants={cardVariants}

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { use, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import DropDown from "../components/DropDown";
@@ -7,7 +7,7 @@ import { ThemeContext } from "../context/ThemeContext";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const toggleOpen = () => setOpen(!isOpen);
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   return (
     <div
       className={`${

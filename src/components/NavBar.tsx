@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { use } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { FaSun } from "react-icons/fa";
 import Head from "./Head";
 import MenuBar from "./MenuBar";
 
 const Navbar = ({ toggleOpen }: { toggleOpen: () => void }) => {
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   document
     .getElementById("theme-color")
     ?.setAttribute("content", theme?.theme ? "#0f0f0f" : "#ffffee");

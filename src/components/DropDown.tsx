@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { use } from "react";
 import { IoMdClose } from "react-icons/io";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -9,7 +9,7 @@ const DropDown = ({
   isOpen: boolean;
   toggleOpen: () => void;
 }) => {
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   return (
     <div
       className={`${

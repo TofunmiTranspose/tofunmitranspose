@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { use } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Head = () => {
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
 
   const themeCol = theme?.theme
     ? { a: "bg-gray-800", b: "text-white" }

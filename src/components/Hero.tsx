@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { use } from "react";
 import { ThemeContext } from "../context/ThemeContext.js";
 import profilePic from "../assets/ProfilePic.png";
 const Hero = () => {
-  const theme = useContext(ThemeContext);
+  const theme = use(ThemeContext);
   const headCol = theme?.theme ? "text-gray-200" : "text-[#000000]";
   const nameCol = theme?.theme ? "text-yellow-400" : "text-[#c7a200]";
   const pasCol = theme?.theme ? "text-gray-200" : "text-[#4A4A4A]";
