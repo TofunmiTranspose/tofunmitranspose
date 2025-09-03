@@ -98,6 +98,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-5 sm:px-4 xl:px-6">
           {projects.map((project) => (
             <Project
+              key={project.title}
               title={project.title}
               src={project.src}
               href={project.href}
@@ -132,12 +133,11 @@ const Project = ({
   };
   const theme = useContext(ThemeContext);
   return (
-    
     <motion.div
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.20 }}
+      viewport={{ amount: 0.2 }}
       className="
        font-sans max-w-sm mx-auto
       bg-transparent rounded-xl shadow-lg overflow-hidden

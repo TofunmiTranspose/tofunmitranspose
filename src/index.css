@@ -20,3 +20,4 @@
     transform: translateX(-100vw);
   }
 }
+@custom-variant dark (&:where(.dark, .dark*));

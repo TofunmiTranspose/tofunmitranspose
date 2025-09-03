@@ -7,7 +7,7 @@ import ThemeContext from "./context/ThemeContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <ThemeContext>
         <Layout>
           <Routes>

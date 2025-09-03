@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext.js";
 import profilePic from "../assets/ProfilePic.png";
-import apply from "../assets/application.pdf";
-import admission from "../assets/admission.pdf";
 const Hero = () => {
   const theme = useContext(ThemeContext);
   const headCol = theme?.theme ? "text-gray-200" : "text-[#000000]";
@@ -37,16 +35,6 @@ const Hero = () => {
              transition-all duration-300 ease-in-out cursor-pointer"
           >
             Download My Resume
-          </button>
-          <button className="block text-white text-xs mb-2">
-            <a href={apply} download={apply}>
-              Apply
-            </a>
-          </button>
-          <button className="block text-white text-xs mb-2">
-            <a href={admission} download={admission}>
-              Admission
-            </a>
           </button>
         </a>
       </div>

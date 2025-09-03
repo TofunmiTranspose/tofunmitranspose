@@ -14,8 +14,8 @@ const DropDown = ({
     <div
       className={`${
         isOpen ? "translate-y-0" : ""
-      } fixed top-0 left-0 transition ease-in-out duration-300 border border-white/10 -translate-y-full  sm:hidden flex items-center justify-center w-full rounded-b-xl backdrop-filter backdrop-blur-[5px] text-${
-        theme?.theme ? "white" : "black"
+      } fixed top-0 left-0 transition ease-in-out duration-300 border border-t-0 border-white/10 -translate-y-full  sm:hidden flex items-center justify-center w-full rounded-b-xl backdrop-filter backdrop-blur-[5px]  dark:text-white ${
+        theme?.theme ? "dark" : ""
       } overflow-hidden`}
     >
       <IoMdClose
@@ -23,9 +23,8 @@ const DropDown = ({
         onClick={toggleOpen}
       />
       <ul
-        className={`h-full w-full p-5 flex flex-col items-center gap-5 font-bold text-xl ${
-          theme?.theme ? "white" : "bg-gray-500/10"
-        }`}
+        className={`h-full w-full p-5 flex flex-col items-center gap-5 font-bold text-xl dark:white dark:bg-gray-500/50
+        `}
       >
         {["About Me", "Skills", "Experience", "Projects", "Contact"].map(
           (item) => (
