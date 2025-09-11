@@ -14,7 +14,7 @@ const DropDown = ({
     <div
       className={`${
         isOpen ? "translate-y-0" : ""
-      } fixed top-0 left-0 transition ease-in-out duration-300 border border-t-0 border-white/10 -translate-y-full  sm:hidden flex items-center justify-center w-full rounded-b-xl backdrop-filter backdrop-blur-[5px]  dark:text-white ${
+      } z-101 fixed top-0 left-0 transition ease-in-out duration-300 border border-t-0 border-white/10 -translate-y-full  sm:hidden flex items-center justify-center w-full rounded-b-xl backdrop-filter backdrop-blur-[5px]  dark:text-white ${
         theme?.theme ? "dark" : ""
       } overflow-hidden`}
     >

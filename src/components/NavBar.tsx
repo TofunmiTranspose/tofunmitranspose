@@ -11,7 +11,7 @@ const Navbar = ({ toggleOpen }: { toggleOpen: () => void }) => {
     ?.setAttribute("content", theme?.theme ? "#0f0f0f" : "#ffffee");
 
   return (
-    <div className="flex items-center justify-between gap-2 px-4 pb-2">
+    <div className="sticky top-0 pt-2 z-100 backdrop-filter backdrop-blur flex items-center justify-between gap-2 px-4 pb-2">
       <Head />
       <div className="flex items-center gap-2">
         <FaSun
