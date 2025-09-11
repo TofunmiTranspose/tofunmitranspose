@@ -2,24 +2,77 @@ import { BiLogoTailwindCss } from "react-icons/bi";
 import { FaGitAlt, FaGithub, FaReact } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa6";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io5";
-import { TbBrandTypescript } from "react-icons/tb";
+import { PiWebhooksLogoBold } from "react-icons/pi";
+import {
+  SiDaisyui,
+  SiReacthookform,
+  SiShadcnui,
+  SiVercel,
+} from "react-icons/si";
+import {
+  TbBrandFramerMotion,
+  TbBrandRadixUi,
+  TbBrandTypescript,
+} from "react-icons/tb";
+import { useTheme } from "../context/ThemeContext";
+
+const skills = [
+  { name: "HTML5", icon: <FaHtml5 />, color: "#fa5c30ff" },
+  { name: "CSS3", icon: <IoLogoCss3 />, color: "#1c8edfff" },
+  { name: "JavaScript", icon: <IoLogoJavascript />, color: "#F7DF1E" },
+  { name: "TypeScript", icon: <TbBrandTypescript />, color: "#3178C6" },
+  { name: "React", icon: <FaReact />, color: "#61DAFB" },
+  { name: "GitHub", icon: <FaGithub />, color: "#777" },
+  { name: "Git", icon: <FaGitAlt />, color: "#F05033" },
+  { name: "Tailwind CSS", icon: <BiLogoTailwindCss />, color: "#06B6D4" },
+  { name: "Framer Motion", icon: <TbBrandFramerMotion />, color: "#dd3dd0ff" },
+  { name: "DaisyUI", icon: <SiDaisyui />, color: "#00C2BF" },
+  { name: "React Hook Form", icon: <SiReacthookform />, color: "#ff619bff" },
+  { name: "Shadcn UI", icon: <SiShadcnui />, color: "#4c69a7ff" },
+  { name: "Radix UI", icon: <TbBrandRadixUi />, color: "#6b49a7ff" },
+  { name: "Vercel", icon: <SiVercel />, color: "#000000" },
+  {
+    name: "Zustand",
+    icon: (
+      <img
+        src="https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg"
+        className="size-16 mb-auto"
+      />
+    ),
+  },
+  { name: "Webhooks", icon: <PiWebhooksLogoBold />, color: "#000000" },
+];
 
 const Skills = () => {
+  const { theme } = useTheme();
   return (
-    <div
-      id="skills"
-      className="pt-4 bg-black backdrop-filter backdrop-blur h-35 flex flex-col items-center gap-5"
-    >
-      <h2 className="text-3xl text-white font-bold">Skills</h2>
-      <div className="flex justify-around w-9/10">
-        <FaHtml5 className="text-4xl text-[#ffa011]" />
-        <IoLogoCss3 className="text-4xl text-[#258bff]" />
-        <IoLogoJavascript className="text-4xl text-[#ffff00]" />
-        <TbBrandTypescript className="text-4xl text-[#157bff]" />
-        <FaReact className="text-4xl text-[#ff00ff]" />
-        <FaGithub className="text-4xl text-white" />
-        <FaGitAlt className="text-4xl text-[#ff6600]" />
-        <BiLogoTailwindCss className="text-4xl text-[#00ffff]" />
+    <div className=" min-h-scree py-12 font-inter text-white">
+      <h2
+        className={`text-4xl font-bold text-center mb-12 ${
+          theme ? "text-white" : "text-black"
+        }`}
+      >
+        My Tech Stack
+      </h2>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+            >
+              {skill.icon.type === "img" ? (
+                skill.icon
+              ) : (
+                <skill.icon.type
+                  className="text-6xl mb-4"
+                  style={{ color: skill.color || "" }}
+                />
+              )}
+              <p className="text-sm font-medium text-center">{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

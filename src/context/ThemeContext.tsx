@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState, type Dispatch } from "react";
+import { createContext, useContext, useEffect, useState, type Dispatch } from "react";
 
 export type ThemeContextType = { theme: boolean; toggleTheme: Dispatch<any> };
 
@@ -23,4 +23,11 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+}
 export default ThemeProvider;
