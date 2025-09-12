@@ -70,7 +70,7 @@ const skills = [
   },
   {
     name: "Vite",
-    icon: <img src="/vite.svg" className="size-16 animate-pulse mb-auto" />,
+    icon: <img src="/vite.svg" className="size-16 mb-auto" />,
     color: "#dd3dd0",
   },
   { name: "VS Shortcuts", icon: <TbBrandVscode />, color: "#4998ff" },
@@ -96,7 +96,7 @@ const Skills = () => {
               key={index}
               className={`flex flex-col items-center p-6  rounded-lg   transition-all duration-300 transform hover:scale-105 ${
                 theme
-                  ? "bg-gray-800 hover:bg-gray-700 shadow-lg"
+                  ? "bg-gray-800 hover:bg-gray-700 shadow-white/10 shadow"
                   : "shadow text-black"
               }`}
             >

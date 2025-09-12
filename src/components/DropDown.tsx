@@ -31,12 +31,12 @@ const DropDown = ({
           { name: "Skills", href: "skills" },
           { name: "Projects", href: "projectsSection" },
           { name: "Contact", href: "contactSection" },
-        ].map((item, i) => (
+        ].map((item) => (
           <li key={`#${item.href}`}>
             <a
               href={`#${item.href}`}
               onClick={() => toggleOpen()}
-              className={"text-teal-600" }
+              className={"text-teal-600"}
             >
               {item.name}
             </a>
