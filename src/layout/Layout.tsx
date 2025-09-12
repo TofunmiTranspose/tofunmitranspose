@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div
       className={`${
         theme?.theme ? "dark " : ""
-      } dark:bg-[#0f0f0f] bg-[#ffffee]  h-full pt-2 flex flex-col justify-between`}
+      } dark:bg-[#0f0f0f] bg-[#ffffee] h-full pt-2 flex flex-col justify-between transition duration-800 ease-in `}
     >
       <DropDown isOpen={isOpen} toggleOpen={toggleOpen} />
       <NavBar toggleOpen={toggleOpen} />

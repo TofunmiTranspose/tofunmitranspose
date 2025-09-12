@@ -7,11 +7,11 @@ const Hero = () => {
   const nameCol = theme?.theme ? "text-yellow-400" : "text-[#c7a200]";
   const pasCol = theme?.theme ? "text-gray-200" : "text-[#4A4A4A]";
   const borCol = theme?.theme
-    ? "border-2 border-teal-300"
+    ? "border-2 border-teal-300/50"
     : "border-3 text-[#3b3b3b]";
   const bCol = theme?.theme ? "text-white" : "text-black";
   return (
-    <div className="sm:px-5 sm:mt-10 flex sm:justify-around flex-col sm:flex-row">
+    <div id="about" className="sm:px-5 sm:mt-10 flex sm:justify-around flex-col sm:flex-row">
       <div className="sm:pl-10 h-screen/2 sm:w-full mt-8 flex flex-col justify-center items-center sm:items-start px-[0.5px]">
         <h2
           className={`text-md lg:text-lg 2xl:text-xl font-bold sm:font-semibold ${headCol} sm:text-gray-400`}

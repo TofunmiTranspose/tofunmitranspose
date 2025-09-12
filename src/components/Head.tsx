@@ -19,9 +19,9 @@ const Head = () => {
         </h2>
       </div>
       <div className=" min-w-50 hidden w-5/10 text-gray-300 text-[10.5px] md:text-[12px] lg:text-[14px] sm:flex justify-between">
-        <a href="#">About Me</a>
+        <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
-        <a href="#">Experience</a>
+        {/* <a href="#">Experience</a> */}
         <a href="#projectsSection">Projects</a>
         <a href="#contactSection">Contact</a>
       </div>

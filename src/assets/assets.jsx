@@ -9,9 +9,10 @@ import storelink from "./storelink.png";
 import ecommerce from "./ecommerce.png";
 import apply from "./application.pdf";
 import admission from "./admission.pdf";
-import restApi from "./restApi.png";
+import gsap from "./gsap.png";
+import gsapsvg from "./gsapsvg.png";
 
-export const { assets } = {
+export const assets  = {
   school,
   sail,
   dashBoard,
@@ -24,4 +25,6 @@ export const { assets } = {
   apply,
   admission,
   rest,
+  gsap,
+  gsapsvg,
 };

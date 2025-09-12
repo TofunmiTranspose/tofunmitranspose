@@ -87,12 +87,12 @@ const Projects = () => {
     },
   ];
   return (
-    <div className={`py-10 ${theme?.theme ? "" : "bg-transparent"}`}>
+    <div
+      id="projectsSection"
+      className={`py-10 ${theme?.theme ? "" : "bg-transparent"}`}
+    >
       <div className="sm:mt-10 flex flex-col items-center gap-10">
-        <h2
-          id="projectsSection"
-          className="text-center text-xl text-[#ff6600] font-bold"
-        >
+        <h2 className="text-center text-2xl lg:text-3xl xl:text-5xl text-[#ff6600] font-bold">
           PROJECTS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 px-5 sm:px-4 xl:px-6">

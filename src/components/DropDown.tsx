@@ -26,15 +26,22 @@ const DropDown = ({
         className={`h-full w-full p-5 flex flex-col items-center gap-5 font-bold text-xl dark:white dark:bg-gray-500/50
         `}
       >
-        {["About Me", "Skills", "Experience", "Projects", "Contact"].map(
-          (item) => (
-            <li key={item}>
-              <a href={`#`} onClick={() => toggleOpen()}>
-                {item}
-              </a>
-            </li>
-          )
-        )}
+        {[
+          { name: "About Me", href: "about" },
+          { name: "Skills", href: "skills" },
+          { name: "Projects", href: "projectsSection" },
+          { name: "Contact", href: "contactSection" },
+        ].map((item, i) => (
+          <li key={`#${item.href}`}>
+            <a
+              href={`#${item.href}`}
+              onClick={() => toggleOpen()}
+              className={"text-teal-600" }
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
