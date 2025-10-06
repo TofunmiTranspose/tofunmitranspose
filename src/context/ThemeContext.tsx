@@ -1,12 +1,5 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  type Dispatch,
-} from "react";
-
-export type ThemeContextType = { theme: boolean; toggleTheme: Dispatch<any> };
+import { createContext, useContext, useEffect, useState } from "react";
+import type { ThemeContextType } from "../types/types";
 
 export const ThemeContext = createContext<ThemeContextType | undefined>(
   undefined
