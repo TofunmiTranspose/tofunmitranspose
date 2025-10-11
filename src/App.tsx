@@ -1,21 +1,30 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import Layout from "./layout/Layout";
-import Dev from "./Pages/Dev";
-import NotFound from "./Pages/NotFound";
+import Dev from "./pages/Dev";
+import NotFound from "./pages/NotFound";
 import ThemeContext from "./context/ThemeContext";
+import Resume from "./pages/Resume";
 
 const App = () => {
   return (
     <BrowserRouter>
       <ThemeContext>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dev" element={<Dev />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <Layout>
+                <Routes>
+                  <Route index element={<Home />} />
+                  <Route path="/dev" element={<Dev />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Layout>
+            }
+          />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
       </ThemeContext>
     </BrowserRouter>
   );

@@ -1,5 +1,6 @@
 import { use } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const theme = use(ThemeContext);
@@ -19,7 +20,7 @@ const Head = () => {
         </h2>
       </div>
       <div className=" min-w-50 hidden w-5/10 text-gray-300 text-[10.5px] md:text-[12px] lg:text-[14px] sm:flex justify-between">
-        <a href="#about">About Me</a>
+        <Link to="/resume">About Me</Link>
         <a href="#skills">Skills</a>
         {/* <a href="#">Experience</a> */}
         <a href="#projectsSection">Projects</a>

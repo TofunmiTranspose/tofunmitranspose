@@ -1,6 +1,7 @@
 import { use } from "react";
 import { IoMdClose } from "react-icons/io";
 import { ThemeContext } from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const DropDown = ({
   isOpen,
@@ -27,19 +28,29 @@ const DropDown = ({
         `}
       >
         {[
-          { name: "About Me", href: "about" },
+          { name: "About Me", to: "/resume" },
           { name: "Skills", href: "skills" },
           { name: "Projects", href: "projectsSection" },
           { name: "Contact", href: "contactSection" },
         ].map((item) => (
-          <li key={`#${item.href}`}>
-            <a
-              href={`#${item.href}`}
-              onClick={() => toggleOpen()}
-              className={"text-teal-600"}
-            >
-              {item.name}
-            </a>
+          <li key={`#${item.href || item.to}`}>
+            {(item.href && (
+              <a
+                href={`#${item.href}`}
+                onClick={() => toggleOpen()}
+                className={"text-teal-500"}
+              >
+                {item.name}
+              </a>
+            )) || (
+              <Link
+                to={`${item.to}`}
+                onClick={() => toggleOpen()}
+                className={"text-teal-600"}
+              >
+                {item.name}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
