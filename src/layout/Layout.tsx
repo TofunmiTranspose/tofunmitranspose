@@ -1,10 +1,11 @@
-import React, { use, useState } from "react";
+import { use, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import DropDown from "../components/DropDown";
 import { ThemeContext } from "../context/ThemeContext";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const toggleOpen = () => setOpen(!isOpen);
   const theme = use(ThemeContext);
@@ -17,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <DropDown isOpen={isOpen} toggleOpen={toggleOpen} />
       <NavBar toggleOpen={toggleOpen} />
       <div className="h-full">
-        {children}
+        <Outlet />
         <Footer />
       </div>
     </div>

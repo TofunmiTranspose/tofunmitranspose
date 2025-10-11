@@ -11,19 +11,15 @@ const App = () => {
     <BrowserRouter>
       <ThemeContext>
         <Routes>
-          <Route
-            path="/*"
-            element={
-              <Layout>
-                <Routes>
-                  <Route index element={<Home />} />
-                  <Route path="/dev" element={<Dev />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Layout>
-            }
-          />
-          <Route path="/resume" element={<Resume />} />
+          {/* Routes with layout */}
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="dev" element={<Dev />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+
+          {/* Standalone route (no layout) */}
+          <Route path="resume" element={<Resume />} />
         </Routes>
       </ThemeContext>
     </BrowserRouter>

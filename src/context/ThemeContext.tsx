@@ -1,10 +1,16 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactElement,
+} from "react";
 import type { ThemeContextType } from "../types/types";
 
 export const ThemeContext = createContext<ThemeContextType | undefined>(
   undefined
 );
-const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+const ThemeProvider = ({ children }: { children: ReactElement }) => {
   const [theme, setTheme] = useState<boolean>(() => {
     const storedTheme = localStorage.getItem("theme");
     return storedTheme !== null ? JSON.parse(storedTheme) : true;
