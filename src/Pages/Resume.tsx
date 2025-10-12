@@ -1,8 +1,7 @@
-import React from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Resume: React.FC = () => {
+const Resume = () => {
   return (
     <div className="resume-wrapper">
       <style>{`
