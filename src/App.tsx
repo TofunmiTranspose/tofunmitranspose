@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./layout/Layout";
-import Dev from "./pages/Dev";
-import NotFound from "./pages/NotFound";
-import Resume from "./pages/Resume";
+import Dev from "./Pages/Dev";
+import NotFound from "./Pages/NotFound";
+import Resume from "./Pages/Resume";
 import ThemeProvider from "./context/ThemeContext";
 
 const App = () => {
