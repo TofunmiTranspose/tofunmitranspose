@@ -3,13 +3,13 @@ import Home from "./pages/Home";
 import Layout from "./layout/Layout";
 import Dev from "./pages/Dev";
 import NotFound from "./pages/NotFound";
-import ThemeContext from "./context/ThemeContext";
 import Resume from "./pages/Resume";
+import ThemeProvider from "./context/ThemeContext";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ThemeContext>
+      <ThemeProvider>
         <Routes>
           {/* Routes with layout */}
           <Route element={<Layout />}>
@@ -21,7 +21,7 @@ const App = () => {
           {/* Standalone route (no layout) */}
           <Route path="resume" element={<Resume />} />
         </Routes>
-      </ThemeContext>
+      </ThemeProvider>
     </BrowserRouter>
   );
 };
