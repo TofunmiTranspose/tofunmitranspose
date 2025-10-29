@@ -21,11 +21,11 @@ const Project: FC<ProjectProps> = ({ project, theme }) => {
     "
     >
       {/* Project Image */}
-      <div className="relative w-full aspect-[8/5] rounded-t-xl overflow-hidden">
+      <div className="relative w-full aspect-16/8 rounded-t-lg overflow-hidden">
         <img
           src={project.src}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100"
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100"
         />
       </div>
 
@@ -34,15 +34,15 @@ const Project: FC<ProjectProps> = ({ project, theme }) => {
           {/* Project Title */}
           <h3
             className={`text-lg md:text-2xl font-semibold ${
-              theme ? "text-white" : "text-black"
+              theme?.theme ? "text-white" : "text-black"
             } mb-2 leading-tight`}
           >
             {project.title}
           </h3>
           {/* Project Description */}
           <p
-            className={`${
-              theme ? "text-white/60" : "text-black/70"
+            className={`cursor-pointer ${
+              theme?.theme ? "text-white/60" : "text-black/70"
             } font-mono text-xs font-thin md:text-base mb-4`}
           >
             {project.description}
@@ -54,9 +54,9 @@ const Project: FC<ProjectProps> = ({ project, theme }) => {
               <span
                 key={index}
                 className={`${
-                  theme ? "text-white/60 bg-gray-50/2" : "text-black/50"
+                  theme?.theme ? "text-white/60 bg-gray-50/2" : "text-black/50"
                 }  px-2 py-[1px] rounded-full text-[11px]
-                border ${theme ? "border-white/10" : "border-black/10"}
+                border ${theme?.theme ? "border-white/10" : "border-black/10"}
                 hover:bg-gray-700/30 hover:border-gray-400 hover:text-gray-200
                 transition-all duration-300`}
               >

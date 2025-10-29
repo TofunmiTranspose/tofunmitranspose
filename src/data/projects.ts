@@ -7,15 +7,55 @@ import chakraPortfolio from "../assets/chakraPortfolio.jpg";
 import dashBoard from "../assets/dashBoard.jpg";
 import firebase from "../assets/firbase.jpg";
 import brand from "../assets/brand.jpg";
+import tickets from "../assets/tickets.png";
+import wasteworth from "../assets/wasteworth.png";
+import agrisight from "../assets/agrisight.png";
+import blogs from "../assets/blogs.png";
 import type { Project } from "../types/types";
 
 export const projects: Project[] = [
+  {
+    title: "AgriSight",
+    src: agrisight,
+    href: "https://agri-sight1.vercel.app/",
+    description: "AI-powered crop diagnosis & insights for farmers.",
+    techStack: ["React.ts", "Tailwind CSS", "Open-AI"],
+  },
   {
     title: "Agricon",
     src: agricon,
     href: "https://agricon.com.ng/",
     description: "A platform connecting farmers with storage solutions.",
     techStack: ["React.js", "Tailwind CSS", "Firebase"],
+  },
+  {
+    title: "WasteWorth",
+    src: wasteworth,
+    href: "https://wastewhat.vercel.app/",
+    description:
+      "WasteWorth; Making recycling simple, rewarding, and impactful for everyone.",
+    techStack: [
+      "React.ts",
+      "Tailwind CSS",
+      "Zustand",
+      "Web hooks",
+      "Framer",
+      "Shadcn UI",
+    ],
+  },
+  {
+    title: "Ticket system app",
+    src: tickets,
+    href: "https://tickets-144.vercel.app/",
+    description: "A tickets management system running CRUD",
+    techStack: ["React.ts", "Tailwind CSS"],
+  },
+  {
+    title: "Blogs",
+    src: blogs,
+    href: "https://transpose-blogs.vercel.app/",
+    description: "A simple blogs website running CRUD",
+    techStack: ["React.ts", "Tailwind CSS"],
   },
   {
     title: "SaaS Project",
