@@ -29,7 +29,7 @@ export const experience: experienceType[] = [
     title: "Frontend Assistant Team Lead",
     company: "InternPulse",
     location: "Remote - Nigeria",
-    date: "August 2025 - Present (Expected Completion: October 2025)",
+    date: "August 2025 - October 2025",
     description: [
       "Leading the Frontend track for 123 team members in COHORT-9, mentoring members and managing development tasks.",
       "Contributing to an intensive 8-week program covering Full-Stack development and leadership.",
